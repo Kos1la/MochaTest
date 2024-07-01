@@ -1,7 +1,13 @@
 
 
-const multiply = (x,y) => {
+ const multiply = (x, y) => {
     return x * y
 }
 
-export default multiply
+const multiplyAsync = (a,b,callback) => {
+    setTimeout(() => {
+        callback(a*b)
+    })
+}
+
+export  { multiply, multiplyAsync };
